@@ -3,7 +3,7 @@ package org.firstinspires.ftc.team00000;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "FieldRelative", group = "A")
+@TeleOp(name = "FieldRelative", group = "a")
 public class Teleop extends OpMode {
     Hardware robot = new Hardware(this);
 
