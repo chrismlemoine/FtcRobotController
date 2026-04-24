@@ -40,6 +40,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 import org.firstinspires.ftc.robotcore.external.navigation.UnnormalizedAngleUnit;
 import org.firstinspires.ftc.robotcore.internal.opmode.OpModeMeta;
+import org.firstinspires.ftc.team00000.OpModeVisibility;
 import org.firstinspires.ftc.team00000.roadRunner.MecanumDrive;
 import org.firstinspires.ftc.team00000.roadRunner.OTOSLocalizer;
 import org.firstinspires.ftc.team00000.roadRunner.PinpointLocalizer;
@@ -56,7 +57,6 @@ public final class TuningOpModes {
     public static final Class<?> DRIVE_CLASS = MecanumDrive.class;
 
     public static final String GROUP = "quickstart";
-    public static final boolean DISABLED = false;
 
     private TuningOpModes() {}
 
@@ -125,7 +125,7 @@ public final class TuningOpModes {
 
     @OpModeRegistrar
     public static void register(OpModeManager manager) {
-        if (DISABLED) return;
+        if (!OpModeVisibility.ENABLE_ROAD_RUNNER_TUNING) return;
 
         DriveViewFactory dvf;
         if (DRIVE_CLASS.equals(MecanumDrive.class)) {
